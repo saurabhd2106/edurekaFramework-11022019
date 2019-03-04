@@ -5,12 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import commonLibs.implementation.CommonElements;
-import commonLibs.implementation.DropdownControl;
-import commonLibs.implementation.MouseControl;
+public class HomePage extends BasePageInitialization {
 
-public class HomePage {
-	
 	@FindBy(linkText = "International Holidays")
 	private WebElement internationHolidayLink;
 
@@ -45,34 +41,33 @@ public class HomePage {
 
 	@FindBy(partialLinkText = "Welcome,")
 	private WebElement welcomeText;
-	
-	CommonElements cmnElement;
-	DropdownControl dropdownControl;
-	MouseControl mouseControl;
-	
+
 	public HomePage(WebDriver driver) {
+
+		super(driver);
 		PageFactory.initElements(driver, this);
-		
-		cmnElement = new CommonElements();
-		dropdownControl = new DropdownControl();
-		mouseControl = new MouseControl(driver);
+
 	}
-	
-	public void loginToUserLogin(String sUserEmailId, String sUserPassword) throws Exception{
-		
-		mouseControl.moveToElement(customerLogin);
-		
+
+	public void loginToUserLogin(String sUserEmailId, String sUserPassword) throws Exception {
+
+		moveToCustomerLogin();
+
 		mouseControl.moveToElementAndClick(userLogin);
-		
+
 		Thread.sleep(2000);
 		cmnElement.setText(userEmailId, sUserEmailId);
-		
+
 		cmnElement.setText(userPassword, sUserPassword);
-		
+
 		cmnElement.clickElement(loginButton);
 	}
 	
-	public String getWelcomeText() throws Exception{
+	private void moveToCustomerLogin() throws Exception{
+		mouseControl.moveToElement(customerLogin);
+	}
+
+	public String getWelcomeText() throws Exception {
 		return cmnElement.getText(welcomeText);
 	}
 }

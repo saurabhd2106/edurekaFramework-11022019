@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="HomePage">
+    
+  <test name="All Test">
+      <groups>
+          <run>
+              <include name="Regression"></include>
+          </run>
+      </groups>
+    <classes>
+      <class name="com.mercuryTravel.tests.HomePageTest"/>
+    </classes>
+  </test> <!-- All Test -->
+</suite> <!-- HomePage -->

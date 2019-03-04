@@ -1,5 +1,11 @@
 package com.mercuryTravel.pages;
 
-public class HolidayPage {
+import org.openqa.selenium.WebDriver;
+
+public class HolidayPage extends BasePageInitialization {
+
+	public HolidayPage(WebDriver driver) {
+		super(driver);
+	}
 
 }
