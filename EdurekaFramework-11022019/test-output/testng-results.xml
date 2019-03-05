@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="HomePage" duration-ms="48676" started-at="2019-03-04T03:13:12Z" finished-at="2019-03-04T03:14:01Z">
+  <suite name="HomePage" duration-ms="53651" started-at="2019-03-05T02:02:35Z" finished-at="2019-03-05T02:03:28Z">
     <groups>
     </groups>
-    <test name="All Test" duration-ms="48676" started-at="2019-03-04T03:13:12Z" finished-at="2019-03-04T03:14:01Z">
+    <test name="All Test" duration-ms="53651" started-at="2019-03-05T02:02:35Z" finished-at="2019-03-05T02:03:28Z">
       <class name="com.mercuryTravel.tests.HomePageTest">
-        <test-method status="PASS" signature="preSetup()[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="preSetup" is-config="true" duration-ms="447" started-at="2019-03-04T03:13:12Z" finished-at="2019-03-04T03:13:12Z">
+        <test-method status="PASS" signature="preSetup()[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="preSetup" is-config="true" duration-ms="579" started-at="2019-03-05T02:02:34Z" finished-at="2019-03-05T02:02:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preSetup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="setup" is-config="true" duration-ms="40945" started-at="2019-03-04T03:13:12Z" finished-at="2019-03-04T03:13:53Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="setup" is-config="true" duration-ms="46090" started-at="2019-03-05T02:02:35Z" finished-at="2019-03-05T02:03:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="verifyTitleOfTheHomepage()[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="verifyTitleOfTheHomepage" duration-ms="37" started-at="2019-03-04T03:13:53Z" finished-at="2019-03-04T03:13:53Z">
+        <test-method status="FAIL" signature="verifyTitleOfTheHomepage()[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="verifyTitleOfTheHomepage" duration-ms="68" started-at="2019-03-05T02:03:21Z" finished-at="2019-03-05T02:03:21Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Mercury Travels: Holiday Packages, Flight Booking, Hotels, Forex, Visa & Travel Insurance 1] but found [Mercury Travels: Holiday Packages, Flight Booking, Hotels, Forex, Visa & Travel Insurance]]]>
@@ -60,7 +60,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTitleOfTheHomepage -->
-        <test-method status="PASS" signature="afterAMethod(org.testng.ITestResult)[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="afterAMethod" is-config="true" duration-ms="2148" started-at="2019-03-04T03:13:53Z" finished-at="2019-03-04T03:13:56Z">
+        <test-method status="PASS" signature="afterAMethod(org.testng.ITestResult)[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="afterAMethod" is-config="true" duration-ms="1576" started-at="2019-03-05T02:03:21Z" finished-at="2019-03-05T02:03:23Z">
           <params>
             <param index="0">
               <value>
@@ -71,11 +71,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterAMethod -->
-        <test-method status="PASS" signature="verifyUserLoginWithCorrectCredentials()[pri:1000, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="verifyUserLoginWithCorrectCredentials" duration-ms="4344" started-at="2019-03-04T03:13:56Z" finished-at="2019-03-04T03:14:00Z">
+        <test-method status="PASS" signature="verifyUserLoginWithCorrectCredentials()[pri:1000, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="verifyUserLoginWithCorrectCredentials" duration-ms="4467" started-at="2019-03-05T02:03:23Z" finished-at="2019-03-05T02:03:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserLoginWithCorrectCredentials -->
-        <test-method status="PASS" signature="afterAMethod(org.testng.ITestResult)[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="afterAMethod" is-config="true" duration-ms="1" started-at="2019-03-04T03:14:00Z" finished-at="2019-03-04T03:14:00Z">
+        <test-method status="PASS" signature="afterAMethod(org.testng.ITestResult)[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="afterAMethod" is-config="true" duration-ms="0" started-at="2019-03-05T02:03:27Z" finished-at="2019-03-05T02:03:27Z">
           <params>
             <param index="0">
               <value>
@@ -86,11 +86,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterAMethod -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="cleanUp" is-config="true" duration-ms="1050" started-at="2019-03-04T03:14:00Z" finished-at="2019-03-04T03:14:01Z">
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="cleanUp" is-config="true" duration-ms="1309" started-at="2019-03-05T02:03:27Z" finished-at="2019-03-05T02:03:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="postCleanUp()[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="postCleanUp" is-config="true" duration-ms="975" started-at="2019-03-04T03:14:01Z" finished-at="2019-03-04T03:14:02Z">
+        <test-method status="PASS" signature="postCleanUp()[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="postCleanUp" is-config="true" duration-ms="972" started-at="2019-03-05T02:03:28Z" finished-at="2019-03-05T02:03:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCleanUp -->

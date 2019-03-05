@@ -1,5 +1,7 @@
 package com.mercuryTravel.tests;
 
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -17,6 +19,7 @@ import com.mercuryTravel.pages.HomePage;
 
 import commonLibs.implementation.CommonDriver;
 import commonLibs.implementation.ScreenshotControl;
+import commonLibs.utils.ConfigReader;
 
 public class BaseTest {
 
@@ -26,22 +29,27 @@ public class BaseTest {
 
 	WebDriver driver;
 	private ScreenshotControl screenshotControl;
-	
+
 	public static long executionStartTime;
 	private String currentWorkingDirectory;
+	private String configPropertyPath;
+
+	public Properties configProperties;
 
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports extentReport;
 	ExtentTest extentTest;
-	
+
 	static {
 		executionStartTime = System.currentTimeMillis();
 	}
 
 	@BeforeSuite(alwaysRun = true)
-	public void preSetup() {
+	public void preSetup() throws Exception {
 
 		initializeCurrentWorkingDirectory();
+
+		initializeConfigProperties();
 
 		initializeHtmlReport();
 
@@ -78,7 +86,7 @@ public class BaseTest {
 			String screenshotFileName = String.format("%s/screenshots/%s%d.jpeg", currentWorkingDirectory,
 					testMethodName, executionStartTime);
 			screenshotControl.captureAndSaveScreenshot(screenshotFileName);
-			
+
 			extentTest.addScreenCaptureFromPath(screenshotFileName);
 
 		} else {
@@ -98,6 +106,13 @@ public class BaseTest {
 		extentReport.flush();
 	}
 
+	private void initializeConfigProperties() throws Exception {
+
+		configPropertyPath = currentWorkingDirectory + "/config/config.properties";
+		configProperties = ConfigReader.readConfigProperties(configPropertyPath);
+
+	}
+
 	private void pageInitialization() {
 		homepage = new HomePage(driver);
 		holidayPage = new HolidayPage(driver);
@@ -109,19 +124,19 @@ public class BaseTest {
 	}
 
 	private void invokeBrowser() throws Exception {
-		String browserType = "chrome";
+		String browserType = configProperties.getProperty("browserType");
 		extentTest.log(Status.INFO, "Initialized Browser :: " + browserType);
 		cmnDriver = new CommonDriver(browserType);
 
-		int pageLoadTimeout = 40;
+		int pageLoadTimeout = Integer.parseInt(configProperties.getProperty("pageLoadTimeout"));
 		cmnDriver.setPageLoadTimeout(pageLoadTimeout);
 		extentTest.log(Status.INFO, "Page Load Timeout :: " + pageLoadTimeout);
 
-		int elementDetectionTimeout = 10;
+		int elementDetectionTimeout = Integer.parseInt(configProperties.getProperty("elementDetectionTimeout"));;
 		cmnDriver.setElementDetectTimeout(elementDetectionTimeout);
 		extentTest.log(Status.INFO, "Implict Wait :: " + elementDetectionTimeout);
 
-		String baseUrl = "https://www.mercurytravels.co.in/";
+		String baseUrl = configProperties.getProperty("baseUrl");
 		cmnDriver.navigateToFirstUrl(baseUrl);
 
 		extentTest.log(Status.INFO, "Navigating to Base Url :: " + baseUrl);
@@ -134,8 +149,9 @@ public class BaseTest {
 	}
 
 	private void initializeHtmlReport() {
-		
-		String htmlReportName = String.format("%s/reports/mercuryTravelTestReport%d.html", currentWorkingDirectory, executionStartTime);
+
+		String htmlReportName = String.format("%s/reports/%s%d.html", currentWorkingDirectory,
+				configProperties.getProperty("reportFilename"), executionStartTime);
 		htmlReporter = new ExtentHtmlReporter(htmlReportName);
 
 		extentReport = new ExtentReports();
