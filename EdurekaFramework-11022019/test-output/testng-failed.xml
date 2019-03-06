@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [HomePage]">
-  <test thread-count="5" name="All Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mercuryTravel.tests.HomePageTest">
+      <class name="demo.DemoTestDataProvider">
         <methods>
-          <include name="verifyTitleOfTheHomepage"/>
-          <include name="cleanUp"/>
-          <include name="postCleanUp"/>
-          <include name="afterAMethod"/>
-          <include name="preSetup"/>
-          <include name="setup"/>
+          <include name="printTestData"/>
         </methods>
-      </class> <!-- com.mercuryTravel.tests.HomePageTest -->
+      </class> <!-- demo.DemoTestDataProvider -->
     </classes>
-  </test> <!-- All Test(failed) -->
-</suite> <!-- Failed suite [HomePage] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

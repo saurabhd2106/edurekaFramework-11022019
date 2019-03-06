@@ -1,100 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="HomePage" duration-ms="53651" started-at="2019-03-05T02:02:35Z" finished-at="2019-03-05T02:03:28Z">
+  <suite name="Default suite" duration-ms="229031" started-at="2019-03-06T01:56:09Z" finished-at="2019-03-06T01:59:58Z">
     <groups>
     </groups>
-    <test name="All Test" duration-ms="53651" started-at="2019-03-05T02:02:35Z" finished-at="2019-03-05T02:03:28Z">
-      <class name="com.mercuryTravel.tests.HomePageTest">
-        <test-method status="PASS" signature="preSetup()[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="preSetup" is-config="true" duration-ms="579" started-at="2019-03-05T02:02:34Z" finished-at="2019-03-05T02:02:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- preSetup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="setup" is-config="true" duration-ms="46090" started-at="2019-03-05T02:02:35Z" finished-at="2019-03-05T02:03:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="verifyTitleOfTheHomepage()[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="verifyTitleOfTheHomepage" duration-ms="68" started-at="2019-03-05T02:03:21Z" finished-at="2019-03-05T02:03:21Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Mercury Travels: Holiday Packages, Flight Booking, Hotels, Forex, Visa & Travel Insurance 1] but found [Mercury Travels: Holiday Packages, Flight Booking, Hotels, Forex, Visa & Travel Insurance]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Mercury Travels: Holiday Packages, Flight Booking, Hotels, Forex, Visa & Travel Insurance 1] but found [Mercury Travels: Holiday Packages, Flight Booking, Hotels, Forex, Visa & Travel Insurance]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at com.mercuryTravel.tests.HomePageTest.verifyTitleOfTheHomepage(HomePageTest.java:23)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTitleOfTheHomepage -->
-        <test-method status="PASS" signature="afterAMethod(org.testng.ITestResult)[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="afterAMethod" is-config="true" duration-ms="1576" started-at="2019-03-05T02:03:21Z" finished-at="2019-03-05T02:03:23Z">
+    <test name="Default test" duration-ms="229031" started-at="2019-03-06T01:56:09Z" finished-at="2019-03-06T01:59:58Z">
+      <class name="demo.DemoTestDataProvider">
+        <test-method status="PASS" signature="printTestData(java.lang.String, java.lang.String)[pri:0, instance:demo.DemoTestDataProvider@1725dc0f]" name="printTestData" duration-ms="43" started-at="2019-03-06T01:59:57Z" data-provider="getData" finished-at="2019-03-06T01:59:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyTitleOfTheHomepage status=FAILURE method=HomePageTest.verifyTitleOfTheHomepage()[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c] output={null}]]]>
+                <![CDATA[Saurabh.d2106@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abc@123]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterAMethod -->
-        <test-method status="PASS" signature="verifyUserLoginWithCorrectCredentials()[pri:1000, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="verifyUserLoginWithCorrectCredentials" duration-ms="4467" started-at="2019-03-05T02:03:23Z" finished-at="2019-03-05T02:03:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserLoginWithCorrectCredentials -->
-        <test-method status="PASS" signature="afterAMethod(org.testng.ITestResult)[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="afterAMethod" is-config="true" duration-ms="0" started-at="2019-03-05T02:03:27Z" finished-at="2019-03-05T02:03:27Z">
+        </test-method> <!-- printTestData -->
+        <test-method status="PASS" signature="printTestData(java.lang.String, java.lang.String)[pri:0, instance:demo.DemoTestDataProvider@1725dc0f]" name="printTestData" duration-ms="5" started-at="2019-03-06T01:59:58Z" data-provider="getData" finished-at="2019-03-06T01:59:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserLoginWithCorrectCredentials status=SUCCESS method=HomePageTest.verifyUserLoginWithCorrectCredentials()[pri:1000, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c] output={null}]]]>
+                <![CDATA[gaurav@qatechhub.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[345743dhf]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterAMethod -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="cleanUp" is-config="true" duration-ms="1309" started-at="2019-03-05T02:03:27Z" finished-at="2019-03-05T02:03:28Z">
+        </test-method> <!-- printTestData -->
+        <test-method status="PASS" signature="printTestData(java.lang.String, java.lang.String)[pri:0, instance:demo.DemoTestDataProvider@1725dc0f]" name="printTestData" duration-ms="17" started-at="2019-03-06T01:59:58Z" data-provider="getData" finished-at="2019-03-06T01:59:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[parul@qatechhub.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[548sdjhfjk]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="postCleanUp()[pri:0, instance:com.mercuryTravel.tests.HomePageTest@1e88b3c]" name="postCleanUp" is-config="true" duration-ms="972" started-at="2019-03-05T02:03:28Z" finished-at="2019-03-05T02:03:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postCleanUp -->
-      </class> <!-- com.mercuryTravel.tests.HomePageTest -->
-    </test> <!-- All Test -->
-  </suite> <!-- HomePage -->
+        </test-method> <!-- printTestData -->
+      </class> <!-- demo.DemoTestDataProvider -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
