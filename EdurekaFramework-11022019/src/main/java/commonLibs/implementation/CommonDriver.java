@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -16,6 +17,8 @@ public class CommonDriver implements IDriver {
 	private int pageLoadTimeout;
 
 	private int elementDetectTimeout;
+	
+	private ChromeOptions option;
 
 	public WebDriver getDriver() {
 		return driver;
@@ -56,7 +59,15 @@ public class CommonDriver implements IDriver {
 					"C:/Users/Saurabh Dhingra/workspace/libs/MicrosoftWebDriver.exe");
 
 			driver = new EdgeDriver();
-		} else {
+		} else if(browserType.equalsIgnoreCase("chrome-headless")){
+			System.setProperty("webdriver.chrome.driver",
+					"C:/Users/Saurabh Dhingra/workspace/libs/chromedriver-2.46/chromedriver.exe");
+			option = new ChromeOptions();
+			option.addArguments("--headless");
+			driver = new ChromeDriver(option);
+		}
+		
+		else {
 			System.out.println("Browser Type Invalid.. setting default variable as Chrome");
 			System.setProperty("webdriver.chrome.driver",
 					"C:/Users/Saurabh Dhingra/workspace/libs/chromedriver-2.46/chromedriver.exe");
